@@ -1,0 +1,30 @@
+batch_number,client_transaction_reference,payee_address_city,payee_address_country,payee_address_line1,payee_address_state,payee_address_zip_code,payee_bank_account_number,payee_bank_account_type,payee_bank_branch_code,payee_bank_code,payee_bank_name,payee_first_name,payee_last_name,payee_title,payment_method,purpose,status,transaction_amount,transaction_currency,transaction_date,transaction_received_date
+BACSDC001,PRU/008/001/1124,Entebbe,Uganda,7041 Ternan Ave street,Kampla,7041,1234567890,Savings,8541,8,Standard Bank,Virginia,Joyner,,,Policy Premium,Submitted,4910.36,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1125,Entebbe,Uganda,7042 Ternan Ave street,Kampla,7041,1234567891,Savings,8542,9,Standard Bank,Phyllis,Jenkins,,,Policy Premium,Submitted,3640.56,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1126,Entebbe,Uganda,7043 Ternan Ave street,Kampla,7041,1234567892,Savings,8543,10,Standard Bank,Hilel,Thornton,,,Policy Premium,Submitted,2935.25,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1127,Entebbe,Uganda,7044 Ternan Ave street,Kampla,7041,1234567893,Savings,8544,11,Standard Bank,Ignacia,York,,,Policy Premium,Submitted,4032.77,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1128,Entebbe,Uganda,7045 Ternan Ave street,Kampla,7041,1234567894,Savings,8545,12,Standard Bank,Heidi,Myers,,,Policy Premium,Submitted,3397.37,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1129,Entebbe,Uganda,7046 Ternan Ave street,Kampla,7041,1234567895,Savings,8546,13,Standard Bank,Thaddeus,Pate,,,Policy Premium,Submitted,3290.44,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1130,Entebbe,Uganda,7047 Ternan Ave street,Kampla,7041,1234567896,Savings,8547,14,Standard Bank,Hasad,Rich,,,Policy Premium,Submitted,4767.48,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1131,Entebbe,Uganda,7048 Ternan Ave street,Kampla,7041,1234567897,Savings,8548,15,Standard Bank,Rowan,Cox,,,Policy Premium,Submitted,3965.52,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1132,Entebbe,Uganda,7049 Ternan Ave street,Kampla,7041,1234567898,Savings,8549,16,Standard Bank,Briar,Ortega,,,Policy Premium,Submitted,4353.63,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1133,Entebbe,Uganda,7050 Ternan Ave street,Kampla,7041,1234567899,Savings,8550,17,Standard Bank,Jolene,Gilbert,,,Policy Premium,Submitted,2979.95,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1134,Entebbe,Uganda,7051 Ternan Ave street,Kampla,7041,1234567900,Savings,8551,18,Standard Bank,Eleanor,French,,,Policy Premium,Submitted,3290.4,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1135,Entebbe,Uganda,7052 Ternan Ave street,Kampla,7041,1234567901,Savings,8552,19,Standard Bank,Flynn,Boyle,,,Policy Premium,Submitted,2410.37,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1136,Entebbe,Uganda,7053 Ternan Ave street,Kampla,7041,1234567902,Savings,8553,20,Standard Bank,Lionel,Holcomb,,,Policy Premium,Submitted,2357.35,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1137,Entebbe,Uganda,7054 Ternan Ave street,Kampla,7041,1234567903,Savings,8554,21,Standard Bank,Colette,Henson,,,Policy Premium,Submitted,2641.35,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1138,Entebbe,Uganda,7055 Ternan Ave street,Kampla,7041,1234567904,Savings,8555,22,Standard Bank,Hayes,Hebert,,,Policy Premium,Submitted,2669.27,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1139,Entebbe,Uganda,7056 Ternan Ave street,Kampla,7041,1234567905,Savings,8556,23,Standard Bank,Rebecca,Singleton,,,Policy Premium,Submitted,2966.45,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1140,Entebbe,Uganda,7057 Ternan Ave street,Kampla,7041,1234567906,Savings,8557,24,Standard Bank,Upton,Craft,,,Policy Premium,Submitted,2539.01,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1141,Entebbe,Uganda,7058 Ternan Ave street,Kampla,7041,1234567907,Savings,8558,25,Standard Bank,Kenyon,Padilla,,,Policy Premium,Submitted,4490.97,UGS,2018-08-02,2018-08-01
+BACSDC001,PRU/008/001/1142,Entebbe,Uganda,7059 Ternan Ave street,Kampla,7041,1234567908,Savings,8559,26,Standard Bank,Jasmine,Bishop,,,Policy Premium,Submitted,2923.45,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1143,Entebbe,Uganda,7060 Ternan Ave street,Kampla,7041,1234567909,Savings,8560,27,FNB,Bruce,Johns,,,Policy Premium,Submitted,3403.43,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1144,Entebbe,Uganda,7061 Ternan Ave street,Kampla,7041,1234567910,Savings,8561,28,FNB,Carly,Rosales,,,Policy Premium,Submitted,2785.83,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1145,Entebbe,Uganda,7062 Ternan Ave street,Kampla,7041,1234567911,Savings,8562,29,FNB,Willow,Dawson,,,Policy Premium,Submitted,3114.05,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1146,Entebbe,Uganda,7063 Ternan Ave street,Kampla,7041,1234567912,Savings,8563,30,FNB,Skyler,Calderon,,,Policy Premium,Submitted,2659.21,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1147,Entebbe,Uganda,7064 Ternan Ave street,Kampla,7041,1234567913,Savings,8564,31,FNB,Inga,Herring,,,Policy Premium,Submitted,3482.69,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1148,Entebbe,Uganda,7065 Ternan Ave street,Kampla,7041,1234567914,Savings,8565,32,FNB,Marshall,Dickson,,,Policy Premium,Submitted,4232.3,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1149,Entebbe,Uganda,7066 Ternan Ave street,Kampla,7041,1234567915,Savings,8566,33,FNB,Xena,Roman,,,Policy Premium,Submitted,3769.05,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1150,Entebbe,Uganda,7067 Ternan Ave street,Kampla,7041,1234567916,Savings,8567,34,FNB,Regina,Palmer,,,Policy Premium,Submitted,4243.4,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1151,Entebbe,Uganda,7068 Ternan Ave street,Kampla,7041,1234567917,Savings,8568,35,FNB,Edan,Sims,,,Policy Premium,Submitted,3243.94,UGS,2018-08-02,2018-08-01
+BACSDC002,PRU/008/001/1152,Entebbe,Uganda,7069 Ternan Ave street,Kampla,7041,1234567918,Savings,8569,36,FNB,Aphrodite,Warner,,,Policy Premium,Submitted,4932.07,UGS,2018-08-02,2018-08-01
