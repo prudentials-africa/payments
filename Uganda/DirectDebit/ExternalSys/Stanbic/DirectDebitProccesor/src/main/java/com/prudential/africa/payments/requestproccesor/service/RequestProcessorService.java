@@ -47,7 +47,7 @@ public class RequestProcessorService {
 		{
 			DirectDebitTransactionInformation1 directDebitTransactionInformation = DirectDebitTransactionInformationMapper.mapDirectDebitTransaction(directDebitTransaction);
 			directDebitTransactionInformations.add(directDebitTransactionInformation);
-			totalCollection.add(directDebitTransaction.getTransactionAmount());
+			totalCollection = totalCollection.add(directDebitTransaction.getTransactionAmount());
 		}
 		
 		
