@@ -56,7 +56,7 @@ public class RequestproccesorServiceTests {
 	
 	@Test
 	public void csvToPojoConvertorTest() {
-		File file = new File("C:\\Arvind\\accolite\\PruAfrica\\direct_debit_temp.csv");
+		File file = new File("src\\test\\resources\\direct_debit_load.csv");
 		List<DirectDebitTransaction> directDebitTransactions = requestProcessorService.csvToPojoConvertor(file);
 		for (DirectDebitTransaction directDebitTransaction : directDebitTransactions) {
 			System.out.println(directDebitTransaction.toString());			
