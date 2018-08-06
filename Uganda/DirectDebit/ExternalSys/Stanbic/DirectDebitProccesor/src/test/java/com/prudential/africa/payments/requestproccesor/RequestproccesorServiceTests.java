@@ -1,6 +1,8 @@
 package com.prudential.africa.payments.requestproccesor;
 
+import java.io.File;
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -28,7 +30,8 @@ public class RequestproccesorServiceTests {
 	@Test
 	public void contextLoads() throws JAXBException, DatatypeConfigurationException {
 		
-		setupDirectDebitTransactions();
+		//setupDirectDebitTransactions();
+		csvToPojoConvertorTest();
 		
 		String document = requestProcessorService.prepareDocumentForStanbicTransactions();
 		System.out.println(document);
@@ -49,6 +52,16 @@ public class RequestproccesorServiceTests {
 			directDebitTransactionRepository.save(directDebitTransaction);
 		}
 		
+	}
+	
+	@Test
+	public void csvToPojoConvertorTest() {
+		File file = new File("C:\\Arvind\\accolite\\PruAfrica\\direct_debit_temp.csv");
+		List<DirectDebitTransaction> directDebitTransactions = requestProcessorService.csvToPojoConvertor(file);
+		for (DirectDebitTransaction directDebitTransaction : directDebitTransactions) {
+			System.out.println(directDebitTransaction.toString());			
+		}
+		requestProcessorService.saveAll(directDebitTransactions);
 	}
 
 }

@@ -7,11 +7,13 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.PropertyException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.namespace.QName;
 
 import com.prudential.payments.stanbic.directdebit.pain008.AccountIdentification3Choice;
 import com.prudential.payments.stanbic.directdebit.pain008.BranchAndFinancialInstitutionIdentification3;
@@ -136,12 +138,12 @@ public class CreateXML {
 
 	}
 
-	private static void createXml(Object obj) throws JAXBException, PropertyException, IOException {
-		JAXBContext jaxbContext = JAXBContext.newInstance(obj.getClass());
+	private static void createXml(Document documnet) throws JAXBException, PropertyException, IOException {
+		JAXBContext jaxbContext = JAXBContext.newInstance(documnet.getClass());
 		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 		jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		StringWriter sw = new StringWriter();
-		jaxbMarshaller.marshal(obj, sw);
+		jaxbMarshaller.marshal( new JAXBElement<Document>(new QName("urn:iso:std:iso:20022:tech:xsd:Document", "Document"), Document.class, null, documnet), sw);
 		String xmlString = sw.toString();
 		System.out.println(xmlString);
 
