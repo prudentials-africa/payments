@@ -1,4 +1,4 @@
-package com.prudential.africa.payments.requestproccesor.service;
+package com.prudential.africa.payments.requestproccesor.transfom;
 
 import java.io.StringWriter;
 import java.math.BigDecimal;
@@ -16,6 +16,7 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.prudential.africa.payments.requestproccesor.dao.entities.DirectDebitTransaction;
@@ -36,6 +37,8 @@ import com.prudential.payments.stanbic.directdebit.pain008.SimpleIdentificationI
 @Component
 public class StanbicXmlTransalator {
 
+	@Autowired
+	private DirectDebitTransactionInformationMapper transactionInformationMapper;
 	
 	public String translateDirectDebitTransactions(Iterable<DirectDebitTransaction> directDebitTransactions) throws JAXBException, DatatypeConfigurationException
 	{
@@ -44,7 +47,7 @@ public class StanbicXmlTransalator {
 		
 		for (DirectDebitTransaction directDebitTransaction : directDebitTransactions)
 		{
-			DirectDebitTransactionInformation1 directDebitTransactionInformation = DirectDebitTransactionInformationMapper.mapDirectDebitTransaction(directDebitTransaction);
+			DirectDebitTransactionInformation1 directDebitTransactionInformation = transactionInformationMapper.mapDirectDebitTransaction(directDebitTransaction);
 			directDebitTransactionInformations.add(directDebitTransactionInformation);
 			totalCollection = totalCollection.add(directDebitTransaction.getTransactionAmount());
 		}

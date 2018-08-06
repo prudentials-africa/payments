@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.prudential.africa.payments.requestproccesor.dao.entities.DirectDebitTransaction;
 import com.prudential.africa.payments.requestproccesor.dao.repository.DirectDebitTransactionRepository;
+import com.prudential.africa.payments.requestproccesor.transfom.StanbicXmlTransalator;
 
 @Service
 public class RequestProcessorService {
