@@ -1,0 +1,33 @@
+<beanio xmlns="http://www.beanio.org/2012/03" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+  <typeHandler name="dateTypeHandler" class="org.beanio.types.DateTypeHandler">
+  </typeHandler>
+  
+  <stream name="ILDirectDebitReader" format="csv">
+	  <record name="directDebitTransactionHeader" order="1" minOccurs="1" maxOccurs="1">
+	  </record>
+    <record name="directDebitTransaction" order="2" class="com.prudential.africa.payments.requestproccesor.dao.entities.DirectDebitTransaction">
+      <field name="clientTransactionReference" />
+      <field name="payeeAddressCity" />
+      <field name="payeeAddressCountry" />
+      <field name="payeeAddressLine1" />
+      <field name="payeeAddressState" />
+      <field name="payeeAddressZipCode" />
+      <field name="payeeBankAccountNumber" />
+      <field name="payeeBankAccountType" />
+      <field name="payeeBankBranchCode" />
+      <field name="payeeBankCode" />
+      <field name="payeeBankName" />
+      <field name="payeeFirstName" />
+      <field name="payeeLastName" />
+      <field name="payeeTitle" />
+      <field name="paymentMethod" />
+      <field name="purpose" />
+      <field name="transactionAmount" />	
+      <field name="transactionCurrency" />	
+      <field name="transactionDate" typeHandler="dateTypeHandler" format="yyyy-MM-dd" />
+    </record>
+  </stream>
+</beanio>

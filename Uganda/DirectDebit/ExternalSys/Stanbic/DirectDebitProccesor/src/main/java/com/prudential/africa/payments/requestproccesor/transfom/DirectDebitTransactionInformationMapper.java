@@ -1,4 +1,6 @@
-package com.prudential.africa.payments.requestproccesor.service;
+package com.prudential.africa.payments.requestproccesor.transfom;
+
+import org.springframework.stereotype.Component;
 
 import com.prudential.africa.payments.requestproccesor.dao.entities.DirectDebitTransaction;
 import com.prudential.payments.stanbic.directdebit.pain008.AccountIdentification3Choice;
@@ -11,11 +13,11 @@ import com.prudential.payments.stanbic.directdebit.pain008.PartyIdentification8;
 import com.prudential.payments.stanbic.directdebit.pain008.PaymentIdentification1;
 import com.prudential.payments.stanbic.directdebit.pain008.SimpleIdentificationInformation2;
 
-
+@Component
 public class DirectDebitTransactionInformationMapper {
 
 	
-	public static DirectDebitTransactionInformation1 mapDirectDebitTransaction(DirectDebitTransaction directDebitTransaction)
+	public DirectDebitTransactionInformation1 mapDirectDebitTransaction(DirectDebitTransaction directDebitTransaction)
 	{
 		DirectDebitTransactionInformation1 drctDbtTx = new DirectDebitTransactionInformation1();
 		
