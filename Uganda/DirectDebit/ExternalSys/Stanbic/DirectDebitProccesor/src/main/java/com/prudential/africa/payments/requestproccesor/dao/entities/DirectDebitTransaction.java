@@ -8,6 +8,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({ "batchNumber", "clientTransactionReference", "payeeAddressCity", "payeeAddressCountry",
+		"payeeAddressLine1", "payeeAddressState", "payeeAddressZipCode", "payeeBankAccountNumber",
+		"payeeBankAccountType", "payeeBankBranchCode", "payeeBankCode", "payeeBankName", "payeeFirstName",
+		"payeeLastName", "payeeTitle", "paymentMethod", "purpose", "status", "transactionAmount", "transactionCurrency",
+		"transactionDate", "transactionReceivedDate" })
+
 @Entity
 public class DirectDebitTransaction {
 
@@ -338,6 +346,24 @@ public class DirectDebitTransaction {
 
 	public void setErrorDescription(String errorDescription) {
 		this.errorDescription = errorDescription;
+	}
+
+	@Override
+	public String toString() {
+		return "DirectDebitTransaction [id=" + id + ", batchNumber=" + batchNumber + ", paymentMethod=" + paymentMethod
+				+ ", purpose=" + purpose + ", clientTransactionReference=" + clientTransactionReference
+				+ ", payeeTitle=" + payeeTitle + ", payeeFirstName=" + payeeFirstName + ", payeeLastName="
+				+ payeeLastName + ", payeeAddressLine1=" + payeeAddressLine1 + ", payeeAddressLine2="
+				+ payeeAddressLine2 + ", payeeAddressLine3=" + payeeAddressLine3 + ", payeeAddressCity="
+				+ payeeAddressCity + ", payeeAddressState=" + payeeAddressState + ", payeeAddressCountry="
+				+ payeeAddressCountry + ", payeeAddressZipCode=" + payeeAddressZipCode + ", payeeBankAccountNumber="
+				+ payeeBankAccountNumber + ", payeeBankCode=" + payeeBankCode + ", payeeBankBranchCode="
+				+ payeeBankBranchCode + ", payeeBankAccountType=" + payeeBankAccountType + ", payeeBankName="
+				+ payeeBankName + ", transactionDate=" + transactionDate + ", submittedDate=" + submittedDate
+				+ ", transactionAmount=" + transactionAmount + ", transactionCurrency=" + transactionCurrency
+				+ ", status=" + status + ", transactionReceivedDate=" + transactionReceivedDate
+				+ ", transactionProcessedDate=" + transactionProcessedDate + ", errorCode=" + errorCode
+				+ ", errorDescription=" + errorDescription + "]";
 	}
 	
 	
