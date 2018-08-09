@@ -31,5 +31,7 @@ public class IntegralLifeDirectDebitRequestTranslatorTests {
 		List<DirectDebitTransaction> directDebitTransactions = 
 				integralLifeDirectDebitRequestTranslator.transalteDataForPaymentsInitiation(new File(fileUrl.toURI().getPath()));
 		System.out.println(directDebitTransactions.size());
+		
+		integralLifeDirectDebitRequestTranslator.transaltePojoToXml(directDebitTransactions);
 	}
 }

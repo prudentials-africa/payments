@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.beanio.BeanIOConfigurationException;
 import org.beanio.BeanReader;
+import org.beanio.BeanWriter;
 import org.beanio.StreamFactory;
 import org.springframework.stereotype.Component;
 
@@ -36,5 +37,24 @@ public class IntegralLifeDirectDebitRequestTranslator {
         in.close();
         
         return directDebitTransactions;
+	}
+	
+	public void transaltePojoToXml(List<DirectDebitTransaction> directDebitTransactions)
+			throws BeanIOConfigurationException, IOException {
+		// create a StreamFactory
+		StreamFactory factory = StreamFactory.newInstance();
+		// load the mapping file
+		factory.load(this.getClass().getClassLoader()
+				.getResourceAsStream("mappings/IntegeralLifeDirectDebitTransactionXmlMapping.xml"));
+
+		// use a StreamFactory to create a BeanWriter
+		BeanWriter out = factory.createWriter("ILDirectDebitReader", new File("target/direct_debit_load.xml"));
+		// write an Employee object directly to the BeanWriter
+		for (DirectDebitTransaction directDebitTransaction : directDebitTransactions) {
+			out.write(directDebitTransaction);
+		}
+
+		out.flush();
+		out.close();
 	}
 }

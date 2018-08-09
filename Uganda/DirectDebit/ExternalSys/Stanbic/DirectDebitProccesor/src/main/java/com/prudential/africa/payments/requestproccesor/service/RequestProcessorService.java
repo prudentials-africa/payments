@@ -10,6 +10,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.prudential.africa.payments.requestproccesor.dao.entities.DirectDebitTransaction;
@@ -37,14 +38,15 @@ public class RequestProcessorService {
 	public List<DirectDebitTransaction> csvToPojoConvertor(File file) {
 		CsvMapper csvMapper = new CsvMapper();
 		CsvSchema csvSchema = csvMapper.typedSchemaFor(DirectDebitTransaction.class).withHeader();
-		List list = null;
+		List<DirectDebitTransaction> directDebitTransaction = null;
 		try {
-			list = new CsvMapper().readerFor(DirectDebitTransaction.class)
-					.with(csvSchema.withColumnSeparator(CsvSchema.DEFAULT_COLUMN_SEPARATOR)).readValues(file).readAll();
+			MappingIterator<DirectDebitTransaction> list = new CsvMapper().readerFor(DirectDebitTransaction.class)
+					.with(csvSchema.withColumnSeparator(CsvSchema.DEFAULT_COLUMN_SEPARATOR)).readValues(file);
+			directDebitTransaction = list.readAll();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return list;
+		return directDebitTransaction;
 
 	}
 

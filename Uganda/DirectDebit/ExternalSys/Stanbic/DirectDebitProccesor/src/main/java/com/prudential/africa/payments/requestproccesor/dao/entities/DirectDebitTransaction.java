@@ -10,11 +10,11 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonPropertyOrder({ "batchNumber", "clientTransactionReference", "payeeAddressCity", "payeeAddressCountry",
+@JsonPropertyOrder({ /*"batchNumber", */"clientTransactionReference", "payeeAddressCity", "payeeAddressCountry",
 		"payeeAddressLine1", "payeeAddressState", "payeeAddressZipCode", "payeeBankAccountNumber",
 		"payeeBankAccountType", "payeeBankBranchCode", "payeeBankCode", "payeeBankName", "payeeFirstName",
-		"payeeLastName", "payeeTitle", "paymentMethod", "purpose", "status", "transactionAmount", "transactionCurrency",
-		"transactionDate", "transactionReceivedDate" })
+		"payeeLastName", "payeeTitle", "paymentMethod", "purpose",/* "status",*/ "transactionAmount", "transactionCurrency",
+		"transactionDate", /*"transactionReceivedDate" */})
 
 @Entity
 public class DirectDebitTransaction {
